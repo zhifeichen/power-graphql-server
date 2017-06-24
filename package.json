@@ -1,0 +1,11 @@
+{
+  "name": "power graphql server",
+  "version": "1.0.0",
+  "devDependencies": {
+    "eslint": "^4.1.0"
+  },
+  "dependencies": {
+    "graphql": "^0.10.3",
+    "graphql-relay": "^0.5.2"
+  }
+}
