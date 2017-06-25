@@ -1,11 +1,21 @@
 {
-  "name": "power graphql server",
+  "name": "power-graphql-server",
   "version": "1.0.0",
+  "scripts": {
+    "start": "node --harmony ./src/server.js"
+  },
   "devDependencies": {
     "eslint": "^4.1.0"
   },
   "dependencies": {
+    "body-parser": "^1.17.2",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.3",
+    "express-graphql": "^0.6.6",
     "graphql": "^0.10.3",
-    "graphql-relay": "^0.5.2"
+    "graphql-relay": "^0.5.2",
+    "knex": "^0.13.0",
+    "mysql": "^2.13.0"
   }
 }
