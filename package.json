@@ -5,7 +5,9 @@
     "start": "node --harmony ./src/server.js"
   },
   "devDependencies": {
-    "eslint": "^4.1.0"
+    "eslint": "^4.1.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.6.0"
   },
   "dependencies": {
     "body-parser": "^1.17.2",
