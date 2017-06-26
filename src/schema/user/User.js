@@ -8,9 +8,9 @@ const {
   mutationWithClientMutationId,
 } = require('graphql-relay');
 
-const db = require('../db');
+const db = require('../../db');
 const UserType = require('./UserType');
-const ValidationError = require('./ValidationError');
+const ValidationError = require('../ValidationError');
 
 const me = {
   type: UserType,

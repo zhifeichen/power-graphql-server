@@ -12,7 +12,7 @@ const { nodeInterface, nodeField: node, nodesField: nodes } = nodeDefinitions(
     return null;
   },
   (obj) => {
-    if (obj.__type === 'User') return require('./UserType');
+    if (obj.__type === 'User') return require('./user').UserType;
 
     return null;
   },
