@@ -1,6 +1,7 @@
 const { GraphQLSchema, GraphQLObjectType } = require('graphql');
 
 const { node, nodes } = require('./Node');
+const { users } = require('./User');
 
 module.exports = new GraphQLSchema({
   query: new GraphQLObjectType({
@@ -8,6 +9,7 @@ module.exports = new GraphQLSchema({
     fields: {
       node,
       nodes,
+      users,
     },
   }),
   // mutation: new GraphQLObjectType({
