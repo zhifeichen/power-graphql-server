@@ -1,0 +1,28 @@
+query{
+  users {
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+      startCursor
+      endCursor
+    }
+    edges {
+      node {
+        id
+        userName
+        loginName
+        power
+      }
+      cursor
+    }
+    totalCount
+  }
+  
+  nodes(ids: ["VXNlcjox", "VXNlcjoy", "VXNlcjoz"]){
+    id
+  }
+  
+  node(id: "VXNlcjoz"){
+    id
+  }
+}

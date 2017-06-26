@@ -1,0 +1,15 @@
+mutation {
+  createUser(input: {loginName: "test1", userName: "test1", userPwd: "123456", power: 0}) {
+    clientMutationId
+    user {
+      id
+      loginName
+      userName
+      power
+      group
+      department
+      telephone
+      isDefind
+    }
+  }
+}

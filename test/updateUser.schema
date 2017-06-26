@@ -1,0 +1,15 @@
+mutation {
+  updateUser(input: {id: "VXNlcjo3", loginName: "test2", userName: "test2", userPwd: "123456", power: 0}) {
+    clientMutationId
+    user {
+      id
+      loginName
+      userName
+      power
+      group
+      department
+      telephone
+      isDefind
+    }
+  }
+}
