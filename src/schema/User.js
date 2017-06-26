@@ -1,11 +1,11 @@
-const { GraphQLNonNull, GraphQLID, GraphQLString, GraphQLInt, GraphQLBoolean } = require('graphql');
+const { GraphQLNonNull, GraphQLInt } = require('graphql');
 const {
-  fromGlobalId,
+  // fromGlobalId,
   connectionDefinitions,
   forwardConnectionArgs,
   connectionFromArraySlice,
   cursorToOffset,
-  mutationWithClientMutationId,
+  // mutationWithClientMutationId,
 } = require('graphql-relay');
 
 const db = require('../db');
@@ -38,10 +38,7 @@ const users = {
         .limit(limit).offset(offset)
         .then(rows => rows.map(x => Object.assign(x, { __type: 'User' }))),
       db.table('sys_users')
-        .count('* as count').then(x => {
-          // console.log(x[0]);
-          return x[0].count;
-        }),
+        .count('* as count').then(x => x[0].count),
     ]);
 
     return {

@@ -3,15 +3,16 @@ const DataLoader = require('dataloader');
 const db = require('./db');
 
 function assignType(obj, type) {
+  // eslint-disable-next-line no-param-reassign, no-underscore-dangle
   obj.__type = type;
   return obj;
 }
 
 function mapTo(keys, keyFn, type, rows) {
-  if(!rows) return mapTo.bind(null, keys, keyFn, type);
+  if (!rows) return mapTo.bind(null, keys, keyFn, type);
   const group = new Map(keys.map(key => [key, null]));
   rows.forEach(row => group.set(keyFn(row), assignType(row, type)));
-  console.log(keys, group.keys(), group.values());
+  // console.log(keys, group.keys(), group.values());
   return Array.from(group.values());
 }
 

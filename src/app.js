@@ -18,7 +18,7 @@ app.get('/graphql/schema', (req, res) => {
   res.type('text/plain').send(printSchema(schema));
 });
 
-app.use('/graphql', expressGraphQL((req) => ({
+app.use('/graphql', expressGraphQL(req => ({ // eslint-disable-line no-unused-vars
   schema,
   context: {
     ...DataLoader.create(),
